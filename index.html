@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Slideshow Prototype</title>
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- jQuery (allowed) -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+<button id="themeToggle" title="Toggle Dark/Light Theme">🌙 Dark Mode</button>
+
+<h2>Image Selection & Slideshow Prototype</h2>
+
+<input type="file" id="fileInput" multiple accept="image/*">
+
+<div id="statusMessage" class="status-message"></div>
+
+<div id="imageTable"></div>
+
+<div id="controls">
+  <button id="finalize">Finalize Selection</button>
+  <span id="selectionCount"></span>
+
+  <h3>Reorder Selected Images</h3>
+  <ul id="selectedList"></ul>
+
+  <label>
+    Slide Delay (milliseconds):
+    <input type="number" id="delay" value="2000" min="500" step="500">
+  </label>
+  <br><br>
+
+  <div class="slideshow-controls">
+    <button id="startSlideshow">▶ Start Slideshow</button>
+    <button id="stopSlideshow" disabled>⏹ Stop Slideshow</button>
+  </div>
+</div>
+
+<div id="slideshow"></div>
+
+<!-- External JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>
+
